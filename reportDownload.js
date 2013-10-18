@@ -13,6 +13,10 @@ params.reportFormat = 'csv';
 params.username = 'username';
 params.password = 'password';
 
+saveReport(params, function(result){
+	console.log("Response: ", result);
+});
+
 var saveReport = function(params, callback){
 	var response = {};
 
@@ -37,13 +41,12 @@ var saveReport = function(params, callback){
 	  response.statusCode = res.statusCode;
 	  console.log(res.statusCode);
 	  response.headers = res.headers;
+	  res.setEncoding('utf8');
 	  res.on('data', function(d) {
 	    response.body += d;
 	  });
 	  res.on('end', function(){
 	  	callback(response);
-
-
 	  });
 	}).on('error', function(e) {
 	  console.log('problem with request: ' + e);
