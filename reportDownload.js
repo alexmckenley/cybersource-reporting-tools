@@ -81,7 +81,7 @@ var saveReport = function(params, callback){
 	  hostname: "ebctest.cybersource.com",
 	  path: path,
 	  method: 'GET',
-	  auth: 'alexmckenley' + ':' + 'Iaamo18245'
+	  auth: 'username' + ':' + 'password'
 	};	
 
 
