@@ -11,8 +11,8 @@ params.day = 17;
 params.merchantID = 'mckenley1';
 params.reportType = 'TransactionDetailReport';
 params.reportFormat = 'csv';
-params.username = 'altaylor';
-params.password = 'Iaamo18245';
+params.username = 'username';
+params.password = 'password';
 
 
 
