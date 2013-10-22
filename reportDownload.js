@@ -11,8 +11,8 @@ params.day = (new Date()).getDate() - 1;
 params.merchantID = 'mckenley1';
 params.reportType = 'TransactionDetailReport';
 params.reportFormat = 'csv';
-params.username = 'username';
-params.password = 'password';
+params.username = 'test';
+params.password = 'password123';
 
 
 
