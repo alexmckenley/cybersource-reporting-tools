@@ -10,4 +10,5 @@ request.post('https://ebctest.cybersource.com/ebctest/TransactionExceptionDetail
 	startTime: '07:00:00',
 	endTime: '07:00:00',
 	format: 'csv'
-}).pipe(process.stdout);//.auth('altaylor', 'Iaamo18245');
+})
+.pipe(process.stdout);
