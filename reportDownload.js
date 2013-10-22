@@ -1,13 +1,13 @@
 var https = require('https');
 var http = require('http');
 var fs = require('fs');
-var index = fs.readFileSync('reporting.html');
+//var index = fs.readFileSync('reporting.html');
 
 
 var params = {};
 params.year = 2013;
 params.month = 10;
-params.day = 17;
+params.day = (new Date()).getDate() - 1;
 params.merchantID = 'mckenley1';
 params.reportType = 'TransactionDetailReport';
 params.reportFormat = 'csv';
@@ -38,18 +38,30 @@ var saveReport = function(params, callback){
 
 	
 	var req = https.request(options, function(res) {
-	  response.statusCode = res.statusCode;
-	  console.log(res.statusCode);
-	  response.headers = res.headers;
-	  res.setEncoding('utf8');
-	  res.on('data', function(d) {
-	    output.write(d);
-	  });
-	  res.on('end', function(){
-	  	callback(response);
-	  });
+	  console.log('STATUS CODE: ', res.statusCode);
+	  if(res.statusCode !== 200){
+	  	console.log("Non Successful response code! ");
+	  	  res.on('data', function(d) {
+		    process.stdout.write(d);
+		  });
+		  res.on('end', function(){
+		  	callback(res.statusCode);
+		  });
+	  }
+	  else{
+		  res.setEncoding('utf8');
+		  res.on('data', function(d) {
+		    output.write(d);
+		  });
+		  res.on('end', function(){
+		  	output.end();
+		  	callback(res.headers);
+		  });
+	  }
+
+
 	}).on('error', function(e) {
-	  console.log('problem with request: ' + e);
+	  console.log('error: ' + e);
 	}).end(); //not sure if this the the correct thing to do?
 
 };
@@ -60,5 +72,5 @@ console.log('Creating file', filename);
 
 saveReport(params, function(result){
 	console.log("Response: ", result);
-	output.end();
+
 });

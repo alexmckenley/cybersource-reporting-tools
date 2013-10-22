@@ -1,12 +1,42 @@
-Transaction Detail Report,1.0,2013-10-17 to 2013-10-17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-row_descriptor,request_id,transaction_date,merchant_ref_number,merchant_id,ics_applications,auth_rcode,auth_rflag,auth_rmsg,auth_reversal_rcode,auth_reversal_rflag,auth_reversal_rmsg,bill_rcode,bill_rflag,bill_rmsg,credit_rcode,credit_rflag,credit_rmsg,ecp_debit_rcode,ecp_debit_rflag,ecp_debit_rmsg,ecp_credit_rcode,ecp_credit_rflag,ecp_credit_rmsg,score_rcode,score_rflag,score_rmsg,tax_rcode,tax_rflag,tax_rmsg,dav_rcode,dav_rflag,dav_rmsg,export_rcode,export_rflag,export_rmsg,elc_rcode,elc_rflag,elc_rmsg,elc_revoke_rcode,elc_revoke_rflag,elc_revoke_rmsg,download_rcode,download_rflag,download_rmsg,create_isv_rcode,create_isv_rflag,create_isv_rmsg,add_value_to_isv_rcode,add_value_to_isv_rflag,add_value_to_isv_rmsg,get_isv_history_rcode,get_isv_history_rflag,get_isv_history_rmsg,get_isv_info_rcode,get_isv_info_rflag,get_isv_info_rmsg,get_isv_profiles_rcode,get_isv_profiles_rflag,get_isv_profiles_rmsg,modify_isv_rcode,modify_isv_rflag,modify_isv_rmsg,redeem_isv_rcode,redeem_isv_rflag,redeem_isv_rmsg,customer_firstname,customer_lastname,customer_middlename,bill_address1,bill_address2,bill_city,bill_state,bill_zip,bill_country,company_name,customer_email,customer_title,customer_phone,ship_to_address1,ship_to_address2,ship_to_city,ship_to_state,ship_to_zip,ship_to_country,ship_to_phone,customer_ipaddress,account_suffix,customer_cc_expmo,customer_cc_expyr,customer_cc_startmo,customer_cc_startyr,customer_cc_issue_number,payment_method,amount,currency,auth_auth_avs,auth_auth_code,auth_cv_result,shipping_method,score_factors,score_host_severity,score_score_result,score_time_local,customer_hostname,shipping_carrier,customer_password_provided,lost_password,repeat_customer,cookies_accepted,customer_loyalty,customer_promotions,gift_wrap,returns_accepted,customer_id,product_risk,applied_score_threshold,applied_time_hedge,applied_velocity_hedge,applied_host_hedge,applied_category_gift,applied_category_time,avs,cv,payment_processor,source,subscription_id
-Request,3819794580550178147625,2013-10-17T03:10:58+00:00,1381979456874,mckenley1,"ics_auth,ics_decision,ics_decision_early,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-16T20:10:58,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3819796107100178147625,2013-10-17T03:13:30+00:00,1381979610117,mckenley1,"ics_decision_early,ics_decision,ics_auth,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-16T20:13:30,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3819797153530178147625,2013-10-17T03:15:15+00:00,1381979714625,mckenley1,"ics_auth,ics_decision,ics_decision_early,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-16T20:15:15,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820151960960178147625,2013-10-17T13:06:36+00:00,1382015200436,mckenley1,"ics_auth,ics_decision,ics_decision_early,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T06:06:36,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820159915770178147625,2013-10-17T13:19:51+00:00,1382015996021,mckenley1,"ics_decision_early,ics_decision,ics_auth,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T06:19:51,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820161058540178147625,2013-10-17T13:21:45+00:00,1382016110341,mckenley1,"ics_auth,ics_decision,ics_decision_early,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T06:21:45,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820162037790178147625,2013-10-17T13:23:23+00:00,1382016208150,mckenley1,"ics_auth,ics_decision,ics_decision_early,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T06:23:23,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820162242730178147625,2013-10-17T13:23:44+00:00,1382016228733,mckenley1,"ics_auth,ics_decision,ics_score,ics_decision_early",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T06:23:44,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820288620410178147625,2013-10-17T16:54:22+00:00,1382028866392,mckenley1,"ics_auth,ics_decision,ics_decision_early,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T09:54:22,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
-Request,3820290674580178147625,2013-10-17T16:57:47+00:00,1382029061750,mckenley1,"ics_auth,ics_decision_early,ics_decision,ics_score",1,SOK,Request was processed successfully.,,,,,,,,,,,,,,,,1,DSCORE,Score exceeds threshold. Score = 96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,JOHN,DOE,,1 Card Lane,,My City,CA,94043,US,,null@cybersource.com,,02890888888,,,,,,,,,4242,11,2020,,,,Visa,100.00,USD,X,888888,,,H,1,96,2013-10-17T09:57:47,,,,,,,,,,,,,50,normal,normal,normal,n,,X,,smartpay,Secure Acceptance SOP,
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+
+
+
+<html lang="en">
+    <head>
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+        
+        <title>Cybersource Business Center - System Error</title>
+        <link rel="shortcut icon" href="/ebctest/images/favicon.ico;jsessionid=1C6E6FD746AAEE999A9A9E8C6ACD5ADA" type="image/x-icon" />
+        <link rel="STYLESHEET" type="text/css" href="/ebctest/css/ubc_style.css.jsp;jsessionid=1C6E6FD746AAEE999A9A9E8C6ACD5ADA">
+    </head>
+
+    <body>
+    
+    
+
+
+<table width="95%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="pagetitle" id="systemErrorPageTitle">System Error</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="systemErrorMessage">An error has occurred. Please try again. If you continue to receive an error, please contact Customer Support.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    
+    </body>
+</html>
