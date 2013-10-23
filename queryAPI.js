@@ -2,7 +2,7 @@ var request = require('request');
 
 request.post(
 	{uri: 'https://ebctest.cybersource.com/ebctest/TransactionExceptionDetailReportRequest.do',
-	form: {	
+	 form: {	
 		username:'test',
 		merchantID: 'mckenley1',
 		password: 'password123',
