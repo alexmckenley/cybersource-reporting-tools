@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Report SYSTEM "https://ebctest.cybersource.com/ebctest/reports/dtd/tdr_1_7.dtd">
+
+<Report xmlns="https://ebctest.cybersource.com/ebctest/reports/dtd/tdr_1_7.dtd" Name="Transaction Detail" Version="1.7" MerchantID="mckenley1" ReportStartDate="2013-10-23 00:00:18.919+00:00" ReportEndDate="2013-10-23 00:00:18.919+00:00">
+  <Requests>
+    <Request MerchantReferenceNumber="1382467240290" RequestDate="2013-10-22T18:40:40+00:00" RequestID="3824672402900176056166" SubscriptionID="" Source="UBC Virtual Terminal" User="altaylor" TransactionReferenceNumber="44500345MMTOQ8F3">
+      <BillTo>
+        <FirstName>FDSA</FirstName>
+        <LastName>FDSA</LastName>
+        <Address1>fdsa</Address1>
+        <City>fdsa</City>
+        <State>CA</State>
+        <Zip>94404</Zip>
+        <Email>null@cybersource.com</Email>
+        <Country>US</Country>
+        <Phone />
+      </BillTo>
+      <PaymentMethod>
+        <Card>
+          <AccountSuffix>1111</AccountSuffix>
+          <ExpirationMonth>12</ExpirationMonth>
+          <ExpirationYear>2013</ExpirationYear>
+          <CardType>Visa</CardType>
+        </Card>
+      </PaymentMethod>
+      <LineItems>
+        <LineItem Number="0">
+          <FulfillmentType />
+          <Quantity>1</Quantity>
+          <UnitPrice>4.00</UnitPrice>
+          <TaxAmount>0.00</TaxAmount>
+          <ProductCode>default</ProductCode>
+        </LineItem>
+      </LineItems>
+      <ApplicationReplies>
+        <ApplicationReply Name="ics_auth">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>Request was processed successfully.</RMsg>
+        </ApplicationReply>
+        <ApplicationReply Name="ics_decision">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>Service processed successfully</RMsg>
+        </ApplicationReply>
+        <ApplicationReply Name="ics_decision_early">
+          <RCode>1</RCode>
+          <RFlag />
+        </ApplicationReply>
+        <ApplicationReply Name="ics_score">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>score service was successful</RMsg>
+        </ApplicationReply>
+      </ApplicationReplies>
+      <PaymentData>
+        <PaymentRequestID>3824672402900176056166</PaymentRequestID>
+        <PaymentProcessor>smartpay</PaymentProcessor>
+        <Amount>4.00</Amount>
+        <CurrencyCode>USD</CurrencyCode>
+        <TotalTaxAmount>0.00</TotalTaxAmount>
+        <AuthorizationCode>888888</AuthorizationCode>
+        <AVSResult>I1</AVSResult>
+        <AVSResultMapped>X</AVSResultMapped>
+        <RequestedAmount>4.00</RequestedAmount>
+        <RequestedAmountCurrencyCode>USD</RequestedAmountCurrencyCode>
+      </PaymentData>
+      <RiskData>
+        <Factors>N</Factors>
+        <HostSeverity>1</HostSeverity>
+        <Score>20</Score>
+        <TimeLocal>2013-10-22T11:40:40</TimeLocal>
+        <AppliedThreshold>50</AppliedThreshold>
+        <AppliedTimeHedge>normal</AppliedTimeHedge>
+        <AppliedVelocityHedge>normal</AppliedVelocityHedge>
+        <AppliedHostHedge>normal</AppliedHostHedge>
+        <AppliedCategoryGift>n</AppliedCategoryGift>
+        <AppliedCategoryTime />
+        <AppliedAVS>X</AppliedAVS>
+      </RiskData>
+      <ProfileList>
+        <Profile Name="Bagel Shop">
+          <ProfileMode>Active</ProfileMode>
+          <ProfileDecision>ACCEPT</ProfileDecision>
+          <RuleList>
+            <Rule>
+              <RuleName>CVN not submitted</RuleName>
+              <RuleDecision>Ignore</RuleDecision>
+            </Rule>
+            <Rule>
+              <RuleName>Letter combinations not found in English</RuleName>
+              <RuleDecision>Ignore</RuleDecision>
+            </Rule>
+            <Rule>
+              <RuleName>Billing and/or shipping address not verifiable</RuleName>
+              <RuleDecision>Ignore</RuleDecision>
+            </Rule>
+            <Rule>
+              <RuleName>Order outside merchant's region</RuleName>
+              <RuleDecision>Ignore</RuleDecision>
+            </Rule>
+          </RuleList>
+        </Profile>
+      </ProfileList>
+    </Request>
+  </Requests>
+</Report>
+
