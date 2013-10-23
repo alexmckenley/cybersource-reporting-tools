@@ -6,7 +6,7 @@ var fs = require('fs');
 
 var params = {};
 params.year = 2013;
-params.month = 10;
+params.month = (new Date()).getMonth() + 1;
 params.day = (new Date()).getDate() - 1;
 params.merchantID = 'mckenley1';
 params.reportType = 'TransactionDetailReport';
