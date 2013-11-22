@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Report SYSTEM "https://ebctest.cybersource.com/ebctest/reports/dtd/tdr_1_7.dtd">
 
-<Report xmlns="https://ebctest.cybersource.com/ebctest/reports/dtd/tdr_1_7.dtd" Name="Transaction Detail" Version="1.7" MerchantID="mckenley1" ReportStartDate="2013-10-23 00:00:18.919+00:00" ReportEndDate="2013-10-23 00:00:18.919+00:00">
+<Report xmlns="https://ebctest.cybersource.com/ebctest/reports/dtd/tdr_1_7.dtd" Name="Transaction Detail" Version="1.7" MerchantID="vans" ReportStartDate="2013-11-20 20:43:36.702-08:00" ReportEndDate="2013-11-20 20:43:36.702-08:00">
   <Requests>
-    <Request MerchantReferenceNumber="1382467240290" RequestDate="2013-10-22T18:40:40+00:00" RequestID="3824672402900176056166" SubscriptionID="" Source="UBC Virtual Terminal" User="altaylor" TransactionReferenceNumber="44500345MMTOQ8F3">
+    <Request MerchantReferenceNumber="11250568" RequestDate="2013-10-04T11:39:09-08:00" RequestID="3809119492350176056442" SubscriptionID="" Source="Simple Order API" TransactionReferenceNumber="50471351" PredecessorRequestID="3809097057370176056470">
       <BillTo>
-        <FirstName>FDSA</FirstName>
-        <LastName>FDSA</LastName>
-        <Address1>fdsa</Address1>
-        <City>fdsa</City>
-        <State>CA</State>
-        <Zip>94404</Zip>
-        <Email>null@cybersource.com</Email>
-        <Country>US</Country>
+        <FirstName />
+        <LastName />
+        <City />
+        <Email />
+        <Country />
         <Phone />
+        <CustomerID>31008439141</CustomerID>
       </BillTo>
       <PaymentMethod>
         <Card>
           <AccountSuffix>1111</AccountSuffix>
-          <ExpirationMonth>12</ExpirationMonth>
-          <ExpirationYear>2013</ExpirationYear>
+          <ExpirationMonth>5</ExpirationMonth>
+          <ExpirationYear>2018</ExpirationYear>
           <CardType>Visa</CardType>
         </Card>
       </PaymentMethod>
@@ -27,8 +25,75 @@
         <LineItem Number="0">
           <FulfillmentType />
           <Quantity>1</Quantity>
-          <UnitPrice>4.00</UnitPrice>
-          <TaxAmount>0.00</TaxAmount>
+          <UnitPrice>45.00</UnitPrice>
+          <TaxAmount>3.60</TaxAmount>
+          <MerchantProductSKU>VN-0SCQ7YW090M</MerchantProductSKU>
+          <ProductName>Canvas Authentic</ProductName>
+          <ProductCode>default</ProductCode>
+        </LineItem>
+      </LineItems>
+      <ApplicationReplies>
+        <ApplicationReply Name="ics_bill">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>Request was processed successfully.</RMsg>
+        </ApplicationReply>
+      </ApplicationReplies>
+      <PaymentData>
+        <PaymentRequestID>3809119492350176056442</PaymentRequestID>
+        <PaymentProcessor>fdiglobal</PaymentProcessor>
+        <Amount>55.55</Amount>
+        <CurrencyCode>USD</CurrencyCode>
+        <TotalTaxAmount>3.60</TotalTaxAmount>
+        <AuthorizationCode>831000</AuthorizationCode>
+        <AVSResult>Y</AVSResult>
+        <AVSResultMapped>Y</AVSResultMapped>
+        <EventType>TRANSMITTED</EventType>
+        <RequestedAmountCurrencyCode>USD</RequestedAmountCurrencyCode>
+      </PaymentData>
+    </Request>
+    <Request MerchantReferenceNumber="11250568" RequestDate="2013-10-04T11:01:45-08:00" RequestID="3809097057370176056470" SubscriptionID="9997000050603519" Source="Simple Order API" TransactionReferenceNumber="Y33YOM9J8L6M">
+      <BillTo>
+        <FirstName>DANNY</FirstName>
+        <LastName>SUN</LastName>
+        <Address1>6550 Katella Ave</Address1>
+        <City>Cypress</City>
+        <State>CA</State>
+        <Zip>90630</Zip>
+        <CompanyName>na</CompanyName>
+        <Email>danny_sun@vfc.com</Email>
+        <Country>US</Country>
+        <Phone>6266266266</Phone>
+        <IPAddress>10.36.72.80</IPAddress>
+        <Hostname>**=F=**</Hostname>
+        <CustomerID>31008439141</CustomerID>
+      </BillTo>
+      <ShipTo>
+        <FirstName>DANNY</FirstName>
+        <LastName>SUN</LastName>
+        <Address1>6550 Katella Ave</Address1>
+        <City>Cypress</City>
+        <State>CA</State>
+        <Zip>90630-5102</Zip>
+        <Country>US</Country>
+        <Phone>6266266266</Phone>
+      </ShipTo>
+      <PaymentMethod>
+        <Card>
+          <AccountSuffix>1111</AccountSuffix>
+          <ExpirationMonth>5</ExpirationMonth>
+          <ExpirationYear>2018</ExpirationYear>
+          <CardType>Visa</CardType>
+        </Card>
+      </PaymentMethod>
+      <LineItems>
+        <LineItem Number="0">
+          <FulfillmentType />
+          <Quantity>1</Quantity>
+          <UnitPrice>45.00</UnitPrice>
+          <TaxAmount>3.60</TaxAmount>
+          <MerchantProductSKU>VN-0SCQ7YW090M</MerchantProductSKU>
+          <ProductName>Canvas Authentic</ProductName>
           <ProductCode>default</ProductCode>
         </LineItem>
       </LineItems>
@@ -39,9 +104,9 @@
           <RMsg>Request was processed successfully.</RMsg>
         </ApplicationReply>
         <ApplicationReply Name="ics_decision">
-          <RCode>1</RCode>
-          <RFlag>SOK</RFlag>
-          <RMsg>Service processed successfully</RMsg>
+          <RCode>0</RCode>
+          <RFlag>DREVIEW</RFlag>
+          <RMsg>Decision is REVIEW.</RMsg>
         </ApplicationReply>
         <ApplicationReply Name="ics_decision_early">
           <RCode>1</RCode>
@@ -49,59 +114,191 @@
         </ApplicationReply>
         <ApplicationReply Name="ics_score">
           <RCode>1</RCode>
-          <RFlag>SOK</RFlag>
-          <RMsg>score service was successful</RMsg>
+          <RFlag>DSCORE</RFlag>
+          <RMsg>Score exceeds threshold. Score = 99</RMsg>
         </ApplicationReply>
       </ApplicationReplies>
       <PaymentData>
-        <PaymentRequestID>3824672402900176056166</PaymentRequestID>
-        <PaymentProcessor>smartpay</PaymentProcessor>
-        <Amount>4.00</Amount>
+        <PaymentRequestID>3809097057370176056470</PaymentRequestID>
+        <PaymentProcessor>fdiglobal</PaymentProcessor>
+        <Amount>55.55</Amount>
         <CurrencyCode>USD</CurrencyCode>
-        <TotalTaxAmount>0.00</TotalTaxAmount>
-        <AuthorizationCode>888888</AuthorizationCode>
-        <AVSResult>I1</AVSResult>
-        <AVSResultMapped>X</AVSResultMapped>
-        <RequestedAmount>4.00</RequestedAmount>
+        <TotalTaxAmount>3.60</TotalTaxAmount>
+        <AuthorizationCode>831000</AuthorizationCode>
+        <AVSResult>Y</AVSResult>
+        <AVSResultMapped>Y</AVSResultMapped>
+        <RequestedAmount>55.55</RequestedAmount>
         <RequestedAmountCurrencyCode>USD</RequestedAmountCurrencyCode>
       </PaymentData>
       <RiskData>
-        <Factors>N</Factors>
+        <Factors>Q,Z,F</Factors>
         <HostSeverity>1</HostSeverity>
-        <Score>20</Score>
-        <TimeLocal>2013-10-22T11:40:40</TimeLocal>
+        <Score>99</Score>
+        <TimeLocal>2013-10-04T04:01:45</TimeLocal>
         <AppliedThreshold>50</AppliedThreshold>
         <AppliedTimeHedge>normal</AppliedTimeHedge>
         <AppliedVelocityHedge>normal</AppliedVelocityHedge>
         <AppliedHostHedge>normal</AppliedHostHedge>
         <AppliedCategoryGift>n</AppliedCategoryGift>
         <AppliedCategoryTime />
-        <AppliedAVS>X</AppliedAVS>
+        <AppliedAVS>Y</AppliedAVS>
       </RiskData>
       <ProfileList>
-        <Profile Name="Bagel Shop">
+        <Profile Name="Profiles to Hold and Review">
           <ProfileMode>Active</ProfileMode>
-          <ProfileDecision>ACCEPT</ProfileDecision>
+          <ProfileDecision>REVIEW</ProfileDecision>
           <RuleList>
             <Rule>
               <RuleName>CVN not submitted</RuleName>
               <RuleDecision>Ignore</RuleDecision>
             </Rule>
             <Rule>
-              <RuleName>Letter combinations not found in English</RuleName>
+              <RuleName>Suspicious telephone number</RuleName>
               <RuleDecision>Ignore</RuleDecision>
             </Rule>
             <Rule>
-              <RuleName>Billing and/or shipping address not verifiable</RuleName>
-              <RuleDecision>Ignore</RuleDecision>
+              <RuleName>Customer on the negative list</RuleName>
+              <RuleDecision>Review</RuleDecision>
             </Rule>
             <Rule>
               <RuleName>Order outside merchant's region</RuleName>
+              <RuleDecision>Review</RuleDecision>
+            </Rule>
+          </RuleList>
+        </Profile>
+        <Profile Name="Profiles to Hold and Review">
+          <ProfileMode>Passive</ProfileMode>
+          <ProfileDecision>REVIEW</ProfileDecision>
+          <RuleList>
+            <Rule>
+              <RuleName>CVN not submitted</RuleName>
               <RuleDecision>Ignore</RuleDecision>
+            </Rule>
+            <Rule>
+              <RuleName>Suspicious telephone number</RuleName>
+              <RuleDecision>Ignore</RuleDecision>
+            </Rule>
+            <Rule>
+              <RuleName>Customer on the negative list</RuleName>
+              <RuleDecision>Review</RuleDecision>
+            </Rule>
+            <Rule>
+              <RuleName>Order outside merchant's region</RuleName>
+              <RuleDecision>Review</RuleDecision>
             </Rule>
           </RuleList>
         </Profile>
       </ProfileList>
+    </Request>
+    <Request MerchantReferenceNumber="11250568" RequestDate="2013-10-04T11:01:38-08:00" RequestID="3809096985280176056442" SubscriptionID="9997000050603519" Source="Simple Order API" TransactionReferenceNumber="Y33YPM9IEUJE">
+      <BillTo>
+        <FirstName>DANNY</FirstName>
+        <LastName>SUN</LastName>
+        <Address1>6550 Katella Ave</Address1>
+        <City>Cypress</City>
+        <State>CA</State>
+        <Zip>90630</Zip>
+        <Email>danny_sun@vfc.com</Email>
+        <Country>US</Country>
+        <Phone />
+        <CustomerID>31008439141</CustomerID>
+      </BillTo>
+      <PaymentMethod>
+        <Card>
+          <AccountSuffix>1111</AccountSuffix>
+          <ExpirationMonth>05</ExpirationMonth>
+          <ExpirationYear>2018</ExpirationYear>
+          <CardType>Visa</CardType>
+        </Card>
+      </PaymentMethod>
+      <LineItems>
+        <LineItem Number="0">
+          <FulfillmentType />
+          <Quantity>1</Quantity>
+          <UnitPrice>0.00</UnitPrice>
+          <TaxAmount>0.00</TaxAmount>
+          <ProductCode>default</ProductCode>
+        </LineItem>
+      </LineItems>
+      <ApplicationReplies>
+        <ApplicationReply Name="ics_auth">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>Request was processed successfully.</RMsg>
+        </ApplicationReply>
+        <ApplicationReply Name="ics_pay_subscription_create">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>Request was processed successfully.</RMsg>
+        </ApplicationReply>
+      </ApplicationReplies>
+      <PaymentData>
+        <PaymentRequestID>3809096985280176056442</PaymentRequestID>
+        <PaymentProcessor>fdiglobal</PaymentProcessor>
+        <Amount>0.00</Amount>
+        <CurrencyCode>USD</CurrencyCode>
+        <TotalTaxAmount>0.00</TotalTaxAmount>
+        <AuthorizationCode>831000</AuthorizationCode>
+        <AVSResult>Y</AVSResult>
+        <AVSResultMapped>Y</AVSResultMapped>
+        <RequestedAmount>0.00</RequestedAmount>
+        <RequestedAmountCurrencyCode>USD</RequestedAmountCurrencyCode>
+      </PaymentData>
+    </Request>
+    <Request MerchantReferenceNumber="11250568" RequestDate="2013-10-04T11:01:17-08:00" RequestID="3809096774970176056442" SubscriptionID="" Source="Simple Order API">
+      <BillTo>
+        <FirstName />
+        <LastName />
+        <Address1>6550 Katella Ave</Address1>
+        <City>Cypress</City>
+        <State>CA</State>
+        <Zip>90630-5102</Zip>
+        <Email />
+        <Country>US</Country>
+        <Phone />
+      </BillTo>
+      <ShipTo>
+        <Address1>6550 Katella Ave</Address1>
+        <City>Cypress</City>
+        <State>CA</State>
+        <Zip>90630-5102</Zip>
+        <Country>US</Country>
+      </ShipTo>
+      <PaymentMethod>
+        <Card>
+          <AccountSuffix />
+          <ExpirationMonth />
+          <ExpirationYear />
+          <CardType />
+        </Card>
+      </PaymentMethod>
+      <LineItems>
+        <LineItem Number="0">
+          <FulfillmentType />
+          <Quantity>1</Quantity>
+          <UnitPrice>45.00</UnitPrice>
+          <TaxAmount>3.60</TaxAmount>
+          <MerchantProductSKU>VN-0SCQ7YW090M</MerchantProductSKU>
+          <ProductName>Canvas Authentic</ProductName>
+          <ProductCode>531119.100</ProductCode>
+        </LineItem>
+        <LineItem Number="1">
+          <FulfillmentType />
+          <Quantity>1</Quantity>
+          <UnitPrice>6.95</UnitPrice>
+          <TaxAmount>0.00</TaxAmount>
+          <MerchantProductSKU>VN-0SCQ7YW090M</MerchantProductSKU>
+          <ProductName>Canvas Authentic</ProductName>
+          <ProductCode>new_shipping</ProductCode>
+        </LineItem>
+      </LineItems>
+      <ApplicationReplies>
+        <ApplicationReply Name="ics_tax">
+          <RCode>1</RCode>
+          <RFlag>SOK</RFlag>
+          <RMsg>Tax service was successful.</RMsg>
+        </ApplicationReply>
+      </ApplicationReplies>
     </Request>
   </Requests>
 </Report>

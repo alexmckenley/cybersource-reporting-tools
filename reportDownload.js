@@ -6,8 +6,8 @@ var fs = require('fs');
 
 var params = {};
 params.year = 2013;
-params.month = (new Date()).getMonth() + 1;
-params.day = (new Date()).getDate() - 1;
+params.month = 11;
+params.day = 10;
 params.merchantID = 'mckenley1';
 params.reportType = 'TransactionExceptionDetailReport';
 params.reportFormat = 'csv';
@@ -19,6 +19,7 @@ params.password = 'password123';
 var saveReport = function(params, callback){
 	var response = {};
 
+	//Create the URL
 	var path = '/ebctest/DownloadReport/'
 	+ params.year + '/'
 	+ params.month + '/'
@@ -29,14 +30,17 @@ var saveReport = function(params, callback){
 
 	//console.log(path);
 
+	//Set the options for the GET request
 	var options = {
 	  hostname: "ebctest.cybersource.com",
 	  path: path,
 	  method: 'GET',
+	  //Basic Authentication Credentials
 	  auth: params.username + ':' + params.password
 	};
 
 	
+	//Send the request and save the output as a file.
 	var req = https.request(options, function(res) {
 	  console.log('STATUS CODE: ', res.statusCode);
 	  if(res.statusCode !== 200){
