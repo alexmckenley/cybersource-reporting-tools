@@ -1,8 +1,10 @@
 var request = require('request');
 var fs = require('fs');
 
-request.post(
-	{uri: 'https://ebctest.cybersource.com/ebctest/Query',
+console.log("searching for Transaction...");
+
+request.post({
+	uri: 'https://ebctest.cybersource.com/ebctest/Query',
 	auth: {
 		user: "test",
 		pass: 'password123'
@@ -12,9 +14,9 @@ request.post(
 		type: 'transaction',
 		subtype: 'transactionDetail',
 		//includeExtendedDetail: 'Related',
-		//merchantReferenceNumber: '1382467240290',
-		//targetDate: '20131022',
-		requestID: '3824672402900176056166',
+		//merchantReferenceNumber: '1385499359317',
+		//targetDate: '20131126',
+		requestID: '3854998584920176056166',
 		versionNumber: '1.7',
 		}
 	},

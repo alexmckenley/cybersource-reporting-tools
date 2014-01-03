@@ -1,26 +1,28 @@
-var https = require('https');
-var http = require('http');
+var request = require('request');
 var fs = require('fs');
 //var index = fs.readFileSync('reporting.html');
 
+//Padding function for date and month
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array((width - n.length) + 1).join(z) + n;
+}
 
-var params = {};
-params.year = 2013;
-params.month = 11;
-params.day = 10;
-params.merchantID = 'mckenley1';
-params.reportType = 'TransactionExceptionDetailReport';
-params.reportFormat = 'csv';
-params.username = 'test';
-params.password = 'password123';
+//Update these values with your relevant information
+var params = {
+	year: 2013,
+	month: 11,
+	day: 25,
+	merchantID: 'your_username_here',
+	username: 'your_username_here',
+	password: 'your_password_here',
+  reportType: 'TransactionExceptionDetailReport',
+  reportFormat: 'csv'
+};
 
-
-
-var saveReport = function(params, callback){
-	var response = {};
-
-	//Create the URL
-	var path = '/ebctest/DownloadReport/'
+var url = "https://ebctest.cybersource.com"
+	+ '/ebctest/DownloadReport/'
 	+ params.year + '/'
 	+ params.month + '/'
 	+ params.day + '/'
@@ -28,53 +30,32 @@ var saveReport = function(params, callback){
 	+ params.reportType + '.'
 	+ params.reportFormat;
 
-	//console.log(path);
-
-	//Set the options for the GET request
-	var options = {
-	  hostname: "ebctest.cybersource.com",
-	  path: path,
-	  method: 'GET',
-	  //Basic Authentication Credentials
-	  auth: params.username + ':' + params.password
-	};
-
-	
-	//Send the request and save the output as a file.
-	var req = https.request(options, function(res) {
-	  console.log('STATUS CODE: ', res.statusCode);
-	  if(res.statusCode !== 200){
-	  	console.log("Non Successful response code! ");
-	  	  res.on('data', function(d) {
-		    process.stdout.write(d);
-		  });
-		  res.on('end', function(){
-		  	callback(res.statusCode);
-		  });
-	  }
-	  else{
-		  res.setEncoding('utf8');
-		  res.on('data', function(d) {
-		    output.write(d);
-		  });
-		  res.on('end', function(){
-		  	output.end();
-		  	callback(res.headers);
-		  });
-	  }
-
-
-	}).on('error', function(e) {
-	  console.log('error: ' + e);
-	}).end(); //not sure if this the the correct thing to do?
-
-};
+console.log(url);
 var filename = params.reportType + '_' + params.month + '_' + params.day + '.' + params.reportFormat;
 
-var output = fs.createWriteStream(filename);
-console.log('Creating file', filename);
+request.get(url, {
+	auth: {
+		user: params.username,
+		pass: params.password
+	}
+},
+function(error, response, body){
+	console.log(error ? error : "HTTP Response Code: " + response.statusCode);
+  if(response.statusCode === 200){
+  	fs.writeFile(filename, body, function(err) {
+      if(err) {
+          console.log(err);
+      } else {
+          console.log("Filename: ", filename);
+          console.log("The file was downloaded successfully!");
+          
+      }
 
-saveReport(params, function(result){
-	console.log("Response: ", result);
-
+  	});
+  }
+  else{
+    console.log("Fetch URL:");
+    console.log(url);
+    console.log("There was a problem with the request!");
+  }
 });

@@ -11,8 +11,8 @@ function pad(n, width, z) {
 
 var params = {
 	year: 2013,
-	month: pad((new Date()).getUTCMonth() + 1, 2),
-	day: pad((new Date()).getUTCDate() - 1, 2),
+	month: 11,
+	day: 25,
 	merchantID: 'mckenley1',
 	reportType: 'TransactionExceptionDetailReport',
 	reportFormat: 'csv',
@@ -39,7 +39,7 @@ request.get(url, {
 	}
 },
 function(error, response, body){
-	console.log(error ? error : response.statusCode);
+	console.log(error ? error : "HTTP Response Code: " + response.statusCode);
   if(response.statusCode === 200){
   	fs.writeFile(filename, body, function(err) {
       if(err) {

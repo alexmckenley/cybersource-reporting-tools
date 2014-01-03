@@ -1,0 +1,9 @@
+{
+  "name": "reportDownload",
+  "description": "CyberSource Programmatic Report Download",
+  "author": "Alex Taylor <alexmckenley@gmail.com>",
+  "dependencies": {
+    "request": ">= 2.27.0"
+  },
+  "engine": "node 0.10.17"
+}
